@@ -14,7 +14,10 @@ class ZXOuathController: UIViewController {
         super.viewDidLoad()
         
         navigationItem.title = "新浪微博"
-            
+        
+        
+        
+        
 //     创建取消按钮，并且监听她的点击事件
        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "取消", style: UIBarButtonItemStyle.Plain, target: self, action: "cancelBtnClick")
         
