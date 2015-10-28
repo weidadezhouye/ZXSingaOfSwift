@@ -34,6 +34,11 @@ class ZXTabBarController: UITabBarController {
         addChildVc(meVc, title: "我", imageName: "tabbar_profile")
         
         
+        
+        
+        
+        
+        
     }
     
   

@@ -16,6 +16,10 @@ class ZXOuathController: UIViewController {
         navigationItem.title = "新浪微博"
         
         
+        print("xxxxx")
+        
+        
+        
         
         
 //     创建取消按钮，并且监听她的点击事件
