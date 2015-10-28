@@ -7,21 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB6451031BE0E59700312B24 /* ZXOuathController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6451021BE0E59700312B24 /* ZXOuathController.swift */; settings = {ASSET_TAGS = (); }; };
+		CB6ED0FA1BDF0B5E0068FCEA /* ZXHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6ED0F91BDF0B5E0068FCEA /* ZXHomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		CB6ED0FC1BDF0B850068FCEA /* ZXMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6ED0FB1BDF0B850068FCEA /* ZXMessageViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		CB6ED0FE1BDF0B9B0068FCEA /* ZXDiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6ED0FD1BDF0B9B0068FCEA /* ZXDiscoverViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		CB6ED1001BDF0BAA0068FCEA /* ZXMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6ED0FF1BDF0BAA0068FCEA /* ZXMeViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		CB6ED1061BDF0C520068FCEA /* ZXTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6ED1051BDF0C520068FCEA /* ZXTabBarController.swift */; settings = {ASSET_TAGS = (); }; };
+		CB6ED1261BDF58370068FCEA /* ZXTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6ED1251BDF58370068FCEA /* ZXTabBar.swift */; settings = {ASSET_TAGS = (); }; };
+		CB6ED1281BDF9B230068FCEA /* ZXBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6ED1271BDF9B230068FCEA /* ZXBaseViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		CB6ED12A1BDF9C720068FCEA /* ZXVisiterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6ED1291BDF9C720068FCEA /* ZXVisiterView.swift */; settings = {ASSET_TAGS = (); }; };
 		CBF66D0C1BDE556700937A82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF66D0B1BDE556700937A82 /* AppDelegate.swift */; };
-		CBF66D0E1BDE556700937A82 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF66D0D1BDE556700937A82 /* ViewController.swift */; };
-		CBF66D111BDE556700937A82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBF66D0F1BDE556700937A82 /* Main.storyboard */; };
 		CBF66D131BDE556700937A82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBF66D121BDE556700937A82 /* Assets.xcassets */; };
-		CBF66D161BDE556700937A82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBF66D141BDE556700937A82 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CB6451021BE0E59700312B24 /* ZXOuathController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXOuathController.swift; sourceTree = "<group>"; };
+		CB6ED0F91BDF0B5E0068FCEA /* ZXHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXHomeViewController.swift; sourceTree = "<group>"; };
+		CB6ED0FB1BDF0B850068FCEA /* ZXMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXMessageViewController.swift; sourceTree = "<group>"; };
+		CB6ED0FD1BDF0B9B0068FCEA /* ZXDiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXDiscoverViewController.swift; sourceTree = "<group>"; };
+		CB6ED0FF1BDF0BAA0068FCEA /* ZXMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXMeViewController.swift; sourceTree = "<group>"; };
+		CB6ED1051BDF0C520068FCEA /* ZXTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXTabBarController.swift; sourceTree = "<group>"; };
+		CB6ED1251BDF58370068FCEA /* ZXTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXTabBar.swift; sourceTree = "<group>"; };
+		CB6ED1271BDF9B230068FCEA /* ZXBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXBaseViewController.swift; sourceTree = "<group>"; };
+		CB6ED1291BDF9C720068FCEA /* ZXVisiterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXVisiterView.swift; sourceTree = "<group>"; };
 		CBF66D081BDE556700937A82 /* ZXSingaSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZXSingaSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CBF66D0B1BDE556700937A82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CBF66D0D1BDE556700937A82 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CBF66D101BDE556700937A82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CBF66D121BDE556700937A82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CBF66D151BDE556700937A82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		CBF66D171BDE556700937A82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBF66D0B1BDE556700937A82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../AppDelegate.swift; sourceTree = "<group>"; };
+		CBF66D121BDE556700937A82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../Assets.xcassets; sourceTree = "<group>"; };
+		CBF66D171BDE556700937A82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +47,230 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB6451001BE0E56500312B24 /* Ouath(授权) */ = {
+			isa = PBXGroup;
+			children = (
+				CB6451011BE0E56500312B24 /* Controller */,
+			);
+			path = "Ouath(授权)";
+			sourceTree = "<group>";
+		};
+		CB6451011BE0E56500312B24 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CB6451021BE0E59700312B24 /* ZXOuathController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CB6ED0E41BDF0A100068FCEA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CB6451001BE0E56500312B24 /* Ouath(授权) */,
+				CB6ED1011BDF0BFF0068FCEA /* Main(主要) */,
+				CB6ED0E91BDF0A100068FCEA /* Home(首页) */,
+				CB6ED0F11BDF0A100068FCEA /* Message(消息) */,
+				CB6ED0E51BDF0A100068FCEA /* Discover(发现) */,
+				CB6ED0ED1BDF0A100068FCEA /* Me(我) */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		CB6ED0E51BDF0A100068FCEA /* Discover(发现) */ = {
+			isa = PBXGroup;
+			children = (
+				CB6ED0E61BDF0A100068FCEA /* Controller */,
+				CB6ED0E71BDF0A100068FCEA /* Model */,
+				CB6ED0E81BDF0A100068FCEA /* View */,
+			);
+			path = "Discover(发现)";
+			sourceTree = "<group>";
+		};
+		CB6ED0E61BDF0A100068FCEA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CB6ED0FD1BDF0B9B0068FCEA /* ZXDiscoverViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CB6ED0E71BDF0A100068FCEA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CB6ED0E81BDF0A100068FCEA /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CB6ED0E91BDF0A100068FCEA /* Home(首页) */ = {
+			isa = PBXGroup;
+			children = (
+				CB6ED0EA1BDF0A100068FCEA /* Controller */,
+				CB6ED0EB1BDF0A100068FCEA /* Model */,
+				CB6ED0EC1BDF0A100068FCEA /* View */,
+			);
+			path = "Home(首页)";
+			sourceTree = "<group>";
+		};
+		CB6ED0EA1BDF0A100068FCEA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CB6ED0F91BDF0B5E0068FCEA /* ZXHomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CB6ED0EB1BDF0A100068FCEA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CB6ED0EC1BDF0A100068FCEA /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CB6ED0ED1BDF0A100068FCEA /* Me(我) */ = {
+			isa = PBXGroup;
+			children = (
+				CB6ED0EE1BDF0A100068FCEA /* Controller */,
+				CB6ED0EF1BDF0A100068FCEA /* Model */,
+				CB6ED0F01BDF0A100068FCEA /* View */,
+			);
+			path = "Me(我)";
+			sourceTree = "<group>";
+		};
+		CB6ED0EE1BDF0A100068FCEA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CB6ED0FF1BDF0BAA0068FCEA /* ZXMeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CB6ED0EF1BDF0A100068FCEA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CB6ED0F01BDF0A100068FCEA /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CB6ED0F11BDF0A100068FCEA /* Message(消息) */ = {
+			isa = PBXGroup;
+			children = (
+				CB6ED0F21BDF0A100068FCEA /* Controller */,
+				CB6ED0F31BDF0A100068FCEA /* Model */,
+				CB6ED0F41BDF0A100068FCEA /* View */,
+			);
+			path = "Message(消息)";
+			sourceTree = "<group>";
+		};
+		CB6ED0F21BDF0A100068FCEA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CB6ED0FB1BDF0B850068FCEA /* ZXMessageViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CB6ED0F31BDF0A100068FCEA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CB6ED0F41BDF0A100068FCEA /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CB6ED0F51BDF0A100068FCEA /* GlobalModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GlobalModel;
+			sourceTree = "<group>";
+		};
+		CB6ED0F61BDF0A100068FCEA /* GlobalView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GlobalView;
+			sourceTree = "<group>";
+		};
+		CB6ED0F71BDF0A100068FCEA /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		CB6ED0F81BDF0AB20068FCEA /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				CBF66D0B1BDE556700937A82 /* AppDelegate.swift */,
+				CBF66D121BDE556700937A82 /* Assets.xcassets */,
+				CBF66D171BDE556700937A82 /* Info.plist */,
+			);
+			name = Other;
+			path = Classes/Other;
+			sourceTree = "<group>";
+		};
+		CB6ED1011BDF0BFF0068FCEA /* Main(主要) */ = {
+			isa = PBXGroup;
+			children = (
+				CB6ED1021BDF0C290068FCEA /* Controller */,
+				CB6ED1031BDF0C290068FCEA /* Model */,
+				CB6ED1041BDF0C290068FCEA /* View */,
+			);
+			path = "Main(主要)";
+			sourceTree = "<group>";
+		};
+		CB6ED1021BDF0C290068FCEA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CB6ED1051BDF0C520068FCEA /* ZXTabBarController.swift */,
+				CB6ED1271BDF9B230068FCEA /* ZXBaseViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CB6ED1031BDF0C290068FCEA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CB6ED1041BDF0C290068FCEA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CB6ED1251BDF58370068FCEA /* ZXTabBar.swift */,
+				CB6ED1291BDF9C720068FCEA /* ZXVisiterView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		CBF66CFF1BDE556700937A82 = {
 			isa = PBXGroup;
 			children = (
@@ -54,12 +290,11 @@
 		CBF66D0A1BDE556700937A82 /* ZXSingaSwift */ = {
 			isa = PBXGroup;
 			children = (
-				CBF66D0B1BDE556700937A82 /* AppDelegate.swift */,
-				CBF66D0D1BDE556700937A82 /* ViewController.swift */,
-				CBF66D0F1BDE556700937A82 /* Main.storyboard */,
-				CBF66D121BDE556700937A82 /* Assets.xcassets */,
-				CBF66D141BDE556700937A82 /* LaunchScreen.storyboard */,
-				CBF66D171BDE556700937A82 /* Info.plist */,
+				CB6ED0F61BDF0A100068FCEA /* GlobalView */,
+				CB6ED0F71BDF0A100068FCEA /* Tool */,
+				CB6ED0F51BDF0A100068FCEA /* GlobalModel */,
+				CB6ED0E41BDF0A100068FCEA /* Classes */,
+				CB6ED0F81BDF0AB20068FCEA /* Other */,
 			);
 			path = ZXSingaSwift;
 			sourceTree = "<group>";
@@ -90,6 +325,7 @@
 		CBF66D001BDE556700937A82 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = ZX;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = " 周学明";
 				TargetAttributes = {
@@ -122,9 +358,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBF66D161BDE556700937A82 /* LaunchScreen.storyboard in Resources */,
 				CBF66D131BDE556700937A82 /* Assets.xcassets in Resources */,
-				CBF66D111BDE556700937A82 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,31 +369,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBF66D0E1BDE556700937A82 /* ViewController.swift in Sources */,
+				CB6ED12A1BDF9C720068FCEA /* ZXVisiterView.swift in Sources */,
 				CBF66D0C1BDE556700937A82 /* AppDelegate.swift in Sources */,
+				CB6ED1281BDF9B230068FCEA /* ZXBaseViewController.swift in Sources */,
+				CB6451031BE0E59700312B24 /* ZXOuathController.swift in Sources */,
+				CB6ED0FE1BDF0B9B0068FCEA /* ZXDiscoverViewController.swift in Sources */,
+				CB6ED1001BDF0BAA0068FCEA /* ZXMeViewController.swift in Sources */,
+				CB6ED0FA1BDF0B5E0068FCEA /* ZXHomeViewController.swift in Sources */,
+				CB6ED0FC1BDF0B850068FCEA /* ZXMessageViewController.swift in Sources */,
+				CB6ED1061BDF0C520068FCEA /* ZXTabBarController.swift in Sources */,
+				CB6ED1261BDF58370068FCEA /* ZXTabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		CBF66D0F1BDE556700937A82 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CBF66D101BDE556700937A82 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		CBF66D141BDE556700937A82 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CBF66D151BDE556700937A82 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		CBF66D181BDE556700937A82 /* Debug */ = {
@@ -247,7 +470,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
 				INFOPLIST_FILE = ZXSingaSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zxm.com.ZXSingaSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -258,7 +483,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
 				INFOPLIST_FILE = ZXSingaSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zxm.com.ZXSingaSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -284,6 +511,7 @@
 				CBF66D1C1BDE556700937A82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
