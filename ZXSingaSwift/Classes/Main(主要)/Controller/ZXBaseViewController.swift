@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ZXBaseViewController: UITableViewController,ZXVisiterViewDelegate{
+class ZXBaseViewController: UITableViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +31,8 @@ class ZXBaseViewController: UITableViewController,ZXVisiterViewDelegate{
         
         view = visiterView
         
+          visiterView.visiterDelegate = self
+        
 //        设置背景颜色（在设置遮盖的位置要注释掉，否则会出现分层效果）
 //        view.backgroundColor = UIColor.whiteColor()
         
@@ -38,6 +40,11 @@ class ZXBaseViewController: UITableViewController,ZXVisiterViewDelegate{
         {
 //            开始旋转
             visiterView.startRotationAnimation()
+//            监听应用程序退出和进入前台
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: "didEnterBackground", name: UIApplicationDidEnterBackgroundNotification, object: nil)
+            
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: "didBacameActive", name: UIApplicationDidBecomeActiveNotification, object: nil)
+            
             
         }
         else if self is ZXMessageViewController
@@ -55,18 +62,33 @@ class ZXBaseViewController: UITableViewController,ZXVisiterViewDelegate{
             //            更换图片和文字
             visiterView.loadVisiter("visitordiscover_image_profile", title: "登录后，你的微博、相册、个人资料会显示在这里，展示给别人")
         }
-        visiterView.visiterDelegate = self
-        
+      
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "注册", style: UIBarButtonItemStyle.Plain, target: self, action: "visiterViewRegester")
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "登陆", style: UIBarButtonItemStyle.Plain, target: self, action: "visiterViewLogin")
         
     }
+//    mark - 通知方法
+    func didEnterBackground() {
+//        暂停动画
+        (view as! ZXVisiterView).pauseAnimation()
+        
+    }
     
+    func didBacameActive() {
+//        继续动画
+        (view as! ZXVisiterView).resumeAnimation()
+    }
+   
+    
+    
+}
+
+extension ZXBaseViewController: ZXVisiterViewDelegate{
+    
+//    实现代理方法
     func visiterViewRegester(){
-        
-        
-        
+    
     }
     
     func visiterViewLogin(){
@@ -76,7 +98,6 @@ class ZXBaseViewController: UITableViewController,ZXVisiterViewDelegate{
         
         presentViewController(nav, animated: true, completion:nil)
     }
-    
     
 }
 
