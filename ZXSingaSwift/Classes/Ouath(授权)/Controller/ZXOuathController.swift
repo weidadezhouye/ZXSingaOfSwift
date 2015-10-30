@@ -55,7 +55,7 @@ class ZXOuathController: UIViewController {
 
 extension ZXOuathController: UIWebViewDelegate {
     func webViewDidStartLoad(webView: UIWebView) {
-        SVProgressHUD.showWithMaskType(SVProgressHUDMaskType.Black)
+        SVProgressHUD.showWithStatus("哥正在玩命帮你加载...", maskType: SVProgressHUDMaskType.Black)
     }
     
     func webViewDidFinishLoad(webView: UIWebView) {
@@ -65,10 +65,11 @@ extension ZXOuathController: UIWebViewDelegate {
     func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
         
         let urlString = request.URL!.absoluteString
-        
+        //        加载的不是回调地址
         if !urlString.hasPrefix(ZXNTWorking.sharedInstance.redirect_uri){
             return true
         }
+//      如果点击确定或者取消拦截不加载
         if let query = request.URL?.query {
             print("query:\(query)")
             let codeString = "code="
@@ -78,6 +79,8 @@ extension ZXOuathController: UIWebViewDelegate {
                 
                 let code = nsQuery.substringFromIndex(codeString.characters.count)
                 
+                print("code : \(code)")
+//                获取 AccessToken
                 loadAccessToken(code)
             }else{
 //                取消
@@ -92,19 +95,46 @@ extension ZXOuathController: UIWebViewDelegate {
     func loadAccessToken(code:String) {
         ZXNTWorking.sharedInstance.loadAccessToken(code) { (result, error) -> () in
             if error != nil || result == nil {
-                SVProgressHUD.showErrorWithStatus("网络不给力。。。", maskType: SVProgressHUDMaskType.Black)
-//                延迟关闭
-                dispatch_after(dispatch_time(DISPATCH_TIME_NOW,(Int64)(NSEC_PER_SEC*1)), dispatch_get_main_queue(), { () -> Void in
-                    self.cancelBtnClick()
-                })
+//                SVProgressHUD.showErrorWithStatus("网络不给力。。。", maskType: SVProgressHUDMaskType.Black)
+////                延迟关闭
+//                dispatch_after(dispatch_time(DISPATCH_TIME_NOW,(Int64)(NSEC_PER_SEC*1)), dispatch_get_main_queue(), { () -> Void in
+//                    self.cancelBtnClick()
+//                })
+                self.netError("网络不给力...")
                 return
             }
-          
+          print("result : \(result)")
+            
 //            保存数据
+            let account = ZXUserAccount(dict: result!)
+//            保存在沙盒
+            account.saveAccount()
             
-            
+            // 加载用户数据
+            account.loadUserInfo({ (error) -> () in
+                if error != nil {
+                    self.netError("加载用户数据出错...")
+                    return
+                }
+                
+                print("account:\(ZXUserAccount.loadAccount())")
+                self.cancelBtnClick()
+                
+                // 切换控制器
+                (UIApplication.sharedApplication().delegate as! AppDelegate).switchRootViewController(false)
+            })
+
         }
         
+    }
+    
+    private func netError(message: String) {
+        SVProgressHUD.showErrorWithStatus(message, maskType: SVProgressHUDMaskType.Black)
+        
+        // 延迟关闭. dispatch_after 没有提示,可以拖oc的dispatch_after来修改
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (Int64)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), { () -> Void in
+            self.cancelBtnClick()
+        })
     }
     
 }

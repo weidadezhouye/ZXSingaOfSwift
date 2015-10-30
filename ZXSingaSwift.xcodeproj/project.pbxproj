@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		9F5ECAEBF1461BA020603A1F /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD918EF410E0C2313C441163 /* Pods.framework */; };
+		CB2206631BE302E000E9159A /* ZXNewFeatureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2206621BE302E000E9159A /* ZXNewFeatureController.swift */; settings = {ASSET_TAGS = (); }; };
+		CB22066A1BE3150C00E9159A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2206691BE3150C00E9159A /* UIColor+Extension.swift */; settings = {ASSET_TAGS = (); }; };
+		CB22066C1BE36F1200E9159A /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB22066B1BE36F1200E9159A /* UIBarButtonItem+Extension.swift */; settings = {ASSET_TAGS = (); }; };
+		CB4DA82A1BE284BA0037F963 /* ZXWelcomeBackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4DA8291BE284BA0037F963 /* ZXWelcomeBackController.swift */; settings = {ASSET_TAGS = (); }; };
 		CB6451031BE0E59700312B24 /* ZXOuathController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6451021BE0E59700312B24 /* ZXOuathController.swift */; settings = {ASSET_TAGS = (); }; };
 		CB6451451BE11E6000312B24 /* ZXNTWorking.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6451441BE11E6000312B24 /* ZXNTWorking.swift */; settings = {ASSET_TAGS = (); }; };
 		CB6ED0FA1BDF0B5E0068FCEA /* ZXHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6ED0F91BDF0B5E0068FCEA /* ZXHomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -26,6 +30,10 @@
 /* Begin PBXFileReference section */
 		1D82F5ACA0D585714A0FE5B0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		34AFFAFE9594A10880D901EE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		CB2206621BE302E000E9159A /* ZXNewFeatureController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXNewFeatureController.swift; sourceTree = "<group>"; };
+		CB2206691BE3150C00E9159A /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		CB22066B1BE36F1200E9159A /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
+		CB4DA8291BE284BA0037F963 /* ZXWelcomeBackController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXWelcomeBackController.swift; sourceTree = "<group>"; };
 		CB6451021BE0E59700312B24 /* ZXOuathController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXOuathController.swift; sourceTree = "<group>"; };
 		CB6451441BE11E6000312B24 /* ZXNTWorking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXNTWorking.swift; sourceTree = "<group>"; };
 		CB6ED0F91BDF0B5E0068FCEA /* ZXHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXHomeViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +81,23 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CB4DA8271BE2841F0037F963 /* NewFeature(新特性) */ = {
+			isa = PBXGroup;
+			children = (
+				CB4DA8281BE2841F0037F963 /* Controller */,
+			);
+			path = "NewFeature(新特性)";
+			sourceTree = "<group>";
+		};
+		CB4DA8281BE2841F0037F963 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CB4DA8291BE284BA0037F963 /* ZXWelcomeBackController.swift */,
+				CB2206621BE302E000E9159A /* ZXNewFeatureController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		CB6451001BE0E56500312B24 /* Ouath(授权) */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +117,7 @@
 		CB6ED0E41BDF0A100068FCEA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				CB4DA8271BE2841F0037F963 /* NewFeature(新特性) */,
 				CB6451001BE0E56500312B24 /* Ouath(授权) */,
 				CB6ED1011BDF0BFF0068FCEA /* Main(主要) */,
 				CB6ED0E91BDF0A100068FCEA /* Home(首页) */,
@@ -249,6 +275,8 @@
 			isa = PBXGroup;
 			children = (
 				CB6451441BE11E6000312B24 /* ZXNTWorking.swift */,
+				CB2206691BE3150C00E9159A /* UIColor+Extension.swift */,
+				CB22066B1BE36F1200E9159A /* UIBarButtonItem+Extension.swift */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -359,6 +387,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = ZX;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = " 周学明";
 				TargetAttributes = {
@@ -450,14 +479,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB22066C1BE36F1200E9159A /* UIBarButtonItem+Extension.swift in Sources */,
 				CB6ED12A1BDF9C720068FCEA /* ZXVisiterView.swift in Sources */,
 				CBF66D0C1BDE556700937A82 /* AppDelegate.swift in Sources */,
 				CB6ED1281BDF9B230068FCEA /* ZXBaseViewController.swift in Sources */,
 				CB6451031BE0E59700312B24 /* ZXOuathController.swift in Sources */,
+				CB4DA82A1BE284BA0037F963 /* ZXWelcomeBackController.swift in Sources */,
 				CB6ED0FE1BDF0B9B0068FCEA /* ZXDiscoverViewController.swift in Sources */,
 				CB6451451BE11E6000312B24 /* ZXNTWorking.swift in Sources */,
 				CB6ED1001BDF0BAA0068FCEA /* ZXMeViewController.swift in Sources */,
 				CB6ED0FA1BDF0B5E0068FCEA /* ZXHomeViewController.swift in Sources */,
+				CB22066A1BE3150C00E9159A /* UIColor+Extension.swift in Sources */,
+				CB2206631BE302E000E9159A /* ZXNewFeatureController.swift in Sources */,
 				CBF467CC1BE244AE00D963CE /* ZXUserAccount.swift in Sources */,
 				CB6ED0FC1BDF0B850068FCEA /* ZXMessageViewController.swift in Sources */,
 				CB6ED1061BDF0C520068FCEA /* ZXTabBarController.swift in Sources */,
@@ -555,11 +588,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ZXSingaSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zxm.com.ZXSingaSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -569,6 +604,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ZXSingaSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

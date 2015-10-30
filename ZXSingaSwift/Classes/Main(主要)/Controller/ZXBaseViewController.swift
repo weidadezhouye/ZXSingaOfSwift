@@ -19,7 +19,7 @@ class ZXBaseViewController: UITableViewController{
     }
 
     
-    let login = false
+    let login = ZXUserAccount.userLogin()
     
     override func loadView() {
         login ? super.loadView() : loginInVisiterView()
