@@ -36,9 +36,21 @@ class ZXOuathController: UIViewController {
 //     创建取消按钮，并且监听她的点击事件
        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "取消", style: UIBarButtonItemStyle.Plain, target: self, action: "cancelBtnClick")
         
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "填充", style: UIBarButtonItemStyle.Plain, target: self, action: "autoFill")
+        
 //        view.backgroundColor = UIColor.brownColor()
         
     }
+    
+    /// 自动填充账号密码
+    func autoFill() {
+        let js = "document.getElementById('userId').value='15179736561';" + "document.getElementById('passwd').value='3239423720';"
+        
+        // webView执行js代码
+        webView.stringByEvaluatingJavaScriptFromString(js)
+    }
+
+    
 //    监听取消按钮的点击事件
     func cancelBtnClick(){
         SVProgressHUD.dismiss()

@@ -9,6 +9,30 @@
 import UIKit
 import AFNetworking
 
+enum ZXNetWorkError : Int{
+    case emptyToken = -1
+    case emptyId = -2
+    
+    var description: String{
+        get {
+            switch self {
+            case ZXNetWorkError.emptyToken:
+                return "accessToken为空"
+            case ZXNetWorkError.emptyId:
+                return "uid为空"
+        
+            }
+            
+        }
+        
+    }
+    
+    // 枚举可以定义方法
+    func error() -> NSError {
+        return NSError(domain: "cn.itcast.error.network", code: rawValue, userInfo: ["errorDescription" : description])
+    }
+
+}
 
 class ZXNTWorking: NSObject {
 //    属性
@@ -79,30 +103,86 @@ class ZXNTWorking: NSObject {
     
     // MARK: - 获取用户信息
     func loadUserInfo(finshed: NetworkFinishedCallback) {
-        // 判断accessToken
-        if ZXUserAccount.loadAccount()?.access_token == nil {
+        
+//        守卫：
+        // 守卫,和可选绑定相反
+        // parameters 代码块里面和外面都能使用
+        guard var parameters = tokenDict() else {
+            // 能到这里来表示 parameters 没有值
             print("没有accessToken")
+            
+            let error = ZXNetWorkError.emptyToken.error()
+            // 告诉调用者
+            finshed(result: nil, error: error)
             return
         }
+
         
         // 判断uid
         if ZXUserAccount.loadAccount()?.uid == nil {
             print("没有uid")
+            let error = ZXNetWorkError.emptyId.error()
+            
+//            告诉调用者
+            finshed(result: nil, error: error)
             return
         }
         
         // url
         let urlString = "https://api.weibo.com/2/users/show.json"
         
-        // 参数
-        let parameters = [
-            "access_token": ZXUserAccount.loadAccount()!.access_token!,
-            "uid": ZXUserAccount.loadAccount()!.uid!
-        ]
+        // 添加元素
+        parameters["uid"] = ZXUserAccount.loadAccount()!.uid!
+        
         
         requestGET(urlString, parameters: parameters, finshed: finshed)
         
     }
+    
+    /// 判断access token是否有值,没有值返回nil,如果有值生成一个字典
+    func tokenDict() -> [String: AnyObject]? {
+        if ZXUserAccount.loadAccount()?.access_token == nil {
+            return nil
+        }
+        
+        return ["access_token": ZXUserAccount.loadAccount()!.access_token!]
+    }
+    
+//    MARK: - 获取微博数据
+    func loadStatus(finished:NetworkFinishedCallback){
+        
+        guard let parameters = tokenDict() else {
+            
+            finished(result: nil, error: ZXNetWorkError.emptyToken.error())
+             return
+        }
+       
+        let urlString = "2/statuses/home_timeline.json"
+//        1.加载网络数据（如果不给力，尝试加载本地数据）
+        requestGET(urlString, parameters: parameters, finshed: finished)
+//        2.加载本地的数据
+//        loadLocalStatus(finished)
+        
+    }
+    
+//       加载本地的链接
+    private func loadLocalStatus(finished: NetworkFinishedCallback) {
+        // 获取路径
+        let path = NSBundle.mainBundle().pathForResource("statuses", ofType: "json")
+        
+        // 加载文件数据
+        let data = NSData(contentsOfFile: path!)
+        
+        // 转成json
+        do {
+            let json = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions(rawValue: 0))
+            // 有数据
+            finished(result: json as? [String : AnyObject], error: nil)
+        } catch {
+            print("出异常了")
+        }
+    }
+    
     
     // 类型别名 = typedefined
     typealias NetworkFinishedCallback = (result: [String: AnyObject]?, error: NSError?) -> ()

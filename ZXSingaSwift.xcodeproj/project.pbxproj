@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		9F5ECAEBF1461BA020603A1F /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD918EF410E0C2313C441163 /* Pods.framework */; };
 		CB045E8B1BE480E500A22682 /* ZXTitleBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB045E8A1BE480E500A22682 /* ZXTitleBtn.swift */; settings = {ASSET_TAGS = (); }; };
+		CB045E8D1BE4D95200A22682 /* statuses.json in Resources */ = {isa = PBXBuildFile; fileRef = CB045E8C1BE4D95200A22682 /* statuses.json */; settings = {ASSET_TAGS = (); }; };
+		CB045E8F1BE4DFD600A22682 /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB045E8E1BE4DFD600A22682 /* UIView+AutoLayout.swift */; settings = {ASSET_TAGS = (); }; };
+		CB045E911BE4E2E600A22682 /* ZXUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB045E901BE4E2E600A22682 /* ZXUser.swift */; settings = {ASSET_TAGS = (); }; };
+		CB045E931BE4E2FB00A22682 /* ZXStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB045E921BE4E2FB00A22682 /* ZXStatus.swift */; settings = {ASSET_TAGS = (); }; };
+		CB045E961BE4E9DF00A22682 /* ZXStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB045E951BE4E9DF00A22682 /* ZXStatusCell.swift */; settings = {ASSET_TAGS = (); }; };
+		CB045E981BE4EA0400A22682 /* ZXStatusTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB045E971BE4EA0400A22682 /* ZXStatusTopView.swift */; settings = {ASSET_TAGS = (); }; };
+		CB045E9A1BE4EB0200A22682 /* Label+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB045E991BE4EB0200A22682 /* Label+Extension.swift */; settings = {ASSET_TAGS = (); }; };
 		CB2206631BE302E000E9159A /* ZXNewFeatureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2206621BE302E000E9159A /* ZXNewFeatureController.swift */; settings = {ASSET_TAGS = (); }; };
 		CB22066A1BE3150C00E9159A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2206691BE3150C00E9159A /* UIColor+Extension.swift */; settings = {ASSET_TAGS = (); }; };
 		CB22066C1BE36F1200E9159A /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB22066B1BE36F1200E9159A /* UIBarButtonItem+Extension.swift */; settings = {ASSET_TAGS = (); }; };
@@ -32,6 +39,13 @@
 		1D82F5ACA0D585714A0FE5B0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		34AFFAFE9594A10880D901EE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CB045E8A1BE480E500A22682 /* ZXTitleBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXTitleBtn.swift; sourceTree = "<group>"; };
+		CB045E8C1BE4D95200A22682 /* statuses.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = statuses.json; sourceTree = "<group>"; };
+		CB045E8E1BE4DFD600A22682 /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
+		CB045E901BE4E2E600A22682 /* ZXUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXUser.swift; sourceTree = "<group>"; };
+		CB045E921BE4E2FB00A22682 /* ZXStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXStatus.swift; sourceTree = "<group>"; };
+		CB045E951BE4E9DF00A22682 /* ZXStatusCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXStatusCell.swift; sourceTree = "<group>"; };
+		CB045E971BE4EA0400A22682 /* ZXStatusTopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXStatusTopView.swift; sourceTree = "<group>"; };
+		CB045E991BE4EB0200A22682 /* Label+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Label+Extension.swift"; sourceTree = "<group>"; };
 		CB2206621BE302E000E9159A /* ZXNewFeatureController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXNewFeatureController.swift; sourceTree = "<group>"; };
 		CB2206691BE3150C00E9159A /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		CB22066B1BE36F1200E9159A /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
@@ -81,6 +95,15 @@
 				34AFFAFE9594A10880D901EE /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		CB045E941BE4E99700A22682 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CB045E951BE4E9DF00A22682 /* ZXStatusCell.swift */,
+				CB045E971BE4EA0400A22682 /* ZXStatusTopView.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		CB4DA8271BE2841F0037F963 /* NewFeature(新特性) */ = {
@@ -190,6 +213,7 @@
 		CB6ED0EC1BDF0A100068FCEA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CB045E941BE4E99700A22682 /* Cell */,
 				CB045E8A1BE480E500A22682 /* ZXTitleBtn.swift */,
 			);
 			path = View;
@@ -263,6 +287,8 @@
 			isa = PBXGroup;
 			children = (
 				CBF467CB1BE244AE00D963CE /* ZXUserAccount.swift */,
+				CB045E901BE4E2E600A22682 /* ZXUser.swift */,
+				CB045E921BE4E2FB00A22682 /* ZXStatus.swift */,
 			);
 			path = GlobalModel;
 			sourceTree = "<group>";
@@ -277,9 +303,11 @@
 		CB6ED0F71BDF0A100068FCEA /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				CB045E8E1BE4DFD600A22682 /* UIView+AutoLayout.swift */,
 				CB6451441BE11E6000312B24 /* ZXNTWorking.swift */,
 				CB2206691BE3150C00E9159A /* UIColor+Extension.swift */,
 				CB22066B1BE36F1200E9159A /* UIBarButtonItem+Extension.swift */,
+				CB045E991BE4EB0200A22682 /* Label+Extension.swift */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -289,6 +317,7 @@
 			children = (
 				CBF66D0B1BDE556700937A82 /* AppDelegate.swift */,
 				CBF66D121BDE556700937A82 /* Assets.xcassets */,
+				CB045E8C1BE4D95200A22682 /* statuses.json */,
 				CBF66D171BDE556700937A82 /* Info.plist */,
 			);
 			name = Other;
@@ -424,6 +453,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBF66D131BDE556700937A82 /* Assets.xcassets in Resources */,
+				CB045E8D1BE4D95200A22682 /* statuses.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,19 +513,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB22066C1BE36F1200E9159A /* UIBarButtonItem+Extension.swift in Sources */,
+				CB045E8F1BE4DFD600A22682 /* UIView+AutoLayout.swift in Sources */,
 				CB6ED12A1BDF9C720068FCEA /* ZXVisiterView.swift in Sources */,
+				CB045E931BE4E2FB00A22682 /* ZXStatus.swift in Sources */,
 				CBF66D0C1BDE556700937A82 /* AppDelegate.swift in Sources */,
 				CB6ED1281BDF9B230068FCEA /* ZXBaseViewController.swift in Sources */,
 				CB6451031BE0E59700312B24 /* ZXOuathController.swift in Sources */,
 				CB4DA82A1BE284BA0037F963 /* ZXWelcomeBackController.swift in Sources */,
 				CB6ED0FE1BDF0B9B0068FCEA /* ZXDiscoverViewController.swift in Sources */,
 				CB6451451BE11E6000312B24 /* ZXNTWorking.swift in Sources */,
+				CB045E9A1BE4EB0200A22682 /* Label+Extension.swift in Sources */,
 				CB6ED1001BDF0BAA0068FCEA /* ZXMeViewController.swift in Sources */,
 				CB045E8B1BE480E500A22682 /* ZXTitleBtn.swift in Sources */,
+				CB045E911BE4E2E600A22682 /* ZXUser.swift in Sources */,
 				CB6ED0FA1BDF0B5E0068FCEA /* ZXHomeViewController.swift in Sources */,
+				CB045E961BE4E9DF00A22682 /* ZXStatusCell.swift in Sources */,
 				CB22066A1BE3150C00E9159A /* UIColor+Extension.swift in Sources */,
 				CB2206631BE302E000E9159A /* ZXNewFeatureController.swift in Sources */,
 				CBF467CC1BE244AE00D963CE /* ZXUserAccount.swift in Sources */,
+				CB045E981BE4EA0400A22682 /* ZXStatusTopView.swift in Sources */,
 				CB6ED0FC1BDF0B850068FCEA /* ZXMessageViewController.swift in Sources */,
 				CB6ED1061BDF0C520068FCEA /* ZXTabBarController.swift in Sources */,
 				CB6ED1261BDF58370068FCEA /* ZXTabBar.swift in Sources */,
