@@ -109,7 +109,7 @@ class ZXUserAccount: NSObject ,NSCoding{
         //        print(userAccount?.expires_date)
         //        print("当前时间:\(NSDate())")
         if userAccount != nil && userAccount?.expires_date?.compare(NSDate()) == NSComparisonResult.OrderedDescending {
-            print("账号有效")
+            print("账号有效，啊哈")
             return userAccount
         }
         

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ZXWelcomeBackController: UIViewController {
 
@@ -18,6 +19,13 @@ class ZXWelcomeBackController: UIViewController {
 
         prepareUI()
 //        MARK: - 网络加载头像********************************
+//        let iconName = ZXUserAccount.loadAccount()?.avatar_large ?? "avatar_default_big"
+//        iconView.image = UIImage(named: iconName)
+        
+        if let urlString = ZXUserAccount.loadAccount()?.avatar_large {
+            // 设置用户的头像
+            iconView.sd_setImageWithURL(NSURL(string: urlString), placeholderImage: UIImage(named: "avatar_default_big"))
+        }
         
     }
     
@@ -32,8 +40,8 @@ class ZXWelcomeBackController: UIViewController {
                 UIView.animateWithDuration(1, animations: { () -> Void in
                     self.welcome.alpha = 1
                     }, completion: { (_) -> Void in
-                        
-        (UIApplication.sharedApplication().delegate as! AppDelegate).switchRootViewController(true)
+//                        
+       (UIApplication.sharedApplication().delegate as! AppDelegate).switchRootViewController(true)
                         
                 })
         }
@@ -89,6 +97,7 @@ class ZXWelcomeBackController: UIViewController {
     private lazy var welcome:UILabel = {
         let welcomeLabel = UILabel()
         welcomeLabel.text = "欢迎归来"
+        welcomeLabel.textColor = UIColor.randomColor()
         welcomeLabel.alpha = 0
         return welcomeLabel
         
