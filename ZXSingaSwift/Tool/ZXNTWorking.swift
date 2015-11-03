@@ -149,19 +149,31 @@ class ZXNTWorking: NSObject {
     }
     
 //    MARK: - 获取微博数据
-    func loadStatus(finished:NetworkFinishedCallback){
+    func loadStatus(since_id: Int, max_id: Int, finished: NetworkFinishedCallback){
         
-        guard let parameters = tokenDict() else {
+        guard var parameters = tokenDict() else {
             
             finished(result: nil, error: ZXNetWorkError.emptyToken.error())
              return
         }
        
+        // 添加参数 since_id和max_id
+        // 判断是否有传since_id,max_id
+        if since_id > 0 {
+        parameters["since_id"] = since_id
+        } else if max_id > 0 {
+        parameters["max_id"] = max_id - 1
+        }
+
+        
         let urlString = "2/statuses/home_timeline.json"
 //        1.加载网络数据（如果不给力，尝试加载本地数据）
-        requestGET(urlString, parameters: parameters, finshed: finished)
-//        2.加载本地的数据
-//        loadLocalStatus(finished)
+        if true {
+            requestGET(urlString, parameters: parameters, finshed: finished)
+        } else {
+            loadLocalStatus(finished)
+        }
+
         
     }
     

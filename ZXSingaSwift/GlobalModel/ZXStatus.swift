@@ -15,7 +15,7 @@ class ZXStatus: NSObject {
     var created_at: String?
     
     /// 字符串型的微博ID
-    var idstr: String?
+    var id: Int = 0
     
     /// 微博信息内容
     var text: String?
@@ -114,8 +114,9 @@ class ZXStatus: NSObject {
     
     /// 加载微博数据
     /// 没有模型对象就能加载数据
-    class func loadStatus(finished: (statuses: [ZXStatus]?, error: NSError?) -> ()) {
-        ZXNTWorking.sharedInstance.loadStatus { (result, error) -> () in
+    class func loadStatus(since_id: Int, max_id: Int, finished: (statuses: [ZXStatus]?, error: NSError?) -> ()) {
+
+        ZXNTWorking.sharedInstance.loadStatus(since_id, max_id: max_id) { (result, error) -> () in
             if error != nil {
                 print("error:\(error)")
                 // 通知调用者
@@ -136,8 +137,8 @@ class ZXStatus: NSObject {
                 
                 // 字典转模型完成
                 // 通知调用者
-                self.cacheWebImage(statuses, finished: finished)
-                
+//                self.cacheWebImage(statuses, finished: finished)
+                finished(statuses: statuses, error: nil)
             } else {
                 // 没有数据,通知调用者
                 finished(statuses: nil, error: nil)

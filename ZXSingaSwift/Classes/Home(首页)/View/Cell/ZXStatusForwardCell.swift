@@ -15,7 +15,6 @@ class ZXStatusForwardCell: ZXStatusCell {
     // 添加 override关键字,实现属性监视器,先调用父类的属性监视器,在调用子类的属性监视器
     override var status: ZXStatus? {
         didSet {
-            print("\(status?.idstr),子类监视器")
             // 设置转发微博label的内容
             let name = status?.retweeted_status?.user?.name ?? "名称为空"
             let text = status?.retweeted_status?.text ?? "内容为空"
