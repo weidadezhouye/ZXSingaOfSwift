@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ZXStatusBottomController: UIView {
+class ZXStatusBottomView: UIView {
 
     
     required init?(coder aDecoder: NSCoder) {
@@ -18,6 +18,9 @@ class ZXStatusBottomController: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+        
+        backgroundColor = UIColor(white: 0.93, alpha: 1)
+        
         prepareUI()
         
     }
@@ -26,23 +29,25 @@ class ZXStatusBottomController: UIView {
     private func prepareUI() {
         
         addSubview(zanBtn)
+        addSubview(lineViewOne)
         addSubview(zhuanFaBtn)
+        addSubview(lineViewTwo)
         addSubview(pingLunBtn)
         
 //        约束控件
-        self.ff_HorizontalTile([zanBtn,zhuanFaBtn,pingLunBtn], insets: )
+        self.ff_HorizontalTile([zanBtn,zhuanFaBtn,pingLunBtn], insets: UIEdgeInsetsZero)
+        
+//        分割线添加约束
+        lineViewOne.ff_AlignHorizontal(type: ff_AlignType.CenterRight, referView: zanBtn, size: nil)
+        
+        lineViewTwo.ff_AlignHorizontal(type: ff_AlignType.CenterRight, referView: zhuanFaBtn, size: nil)
         
         
         
         
     }
     
-    
-    
-    
-    
-    
-    
+
 //    MARK: - 懒加载
     private lazy var zanBtn : UIButton = UIButton(imageName: "timeline_icon_unlike", titleName: "赞", titleColor: UIColor.grayColor(), fontsize: 18)
   
@@ -51,6 +56,9 @@ class ZXStatusBottomController: UIView {
     
     private lazy var pingLunBtn : UIButton = UIButton(imageName: "timeline_icon_comment", titleName: "评论", titleColor: UIColor.grayColor(), fontsize: 18)
     
+    private lazy var lineViewOne : UIImageView = UIImageView(image: UIImage(named: "timeline_card_bottom_line_highlighted"))
+    
+    private lazy var lineViewTwo : UIImageView = UIImageView(image: UIImage(named: "timeline_card_bottom_line_highlighted"))
 
 
 }

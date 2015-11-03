@@ -39,10 +39,11 @@ class ZXUser: NSObject {
     }
     
     var mbrank : Int = 0
+   
     var mbrankImage : UIImage? {
         if mbrank > 0 && mbrank <= 6 {
         return UIImage(named: "common_icon_membership_level\(mbrank)")
-        
+       
         }
     
     return nil

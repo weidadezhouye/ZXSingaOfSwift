@@ -10,12 +10,22 @@ import UIKit
 
 class ZXStatusNomalCell: ZXStatusCell {
 
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
+    
+   override func prepareUI() {
+    
+    super.prepareUI()
+    
+    
+    let clons = pictureView.ff_AlignVertical(type: ff_AlignType.BottomLeft, referView: contentLabel, size: CGSizeMake(0, 0), offset: CGPointMake(0, 8))
+    
+    pictureViewWidthCon = pictureView.ff_Constraint(clons, attribute: NSLayoutAttribute.Width)
+    pictureViewHeightCon = pictureView.ff_Constraint(clons, attribute: NSLayoutAttribute.Height)
+    
+    
+    
+        
     }
-    */
+    
+    
 
 }

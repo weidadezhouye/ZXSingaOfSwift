@@ -1,3 +1,4 @@
+
 //
 //  UIImageView+Extension.swift
 //  ZXSingaSwift
@@ -6,4 +7,22 @@
 //  Copyright © 2015年  周学明. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+extension UIImageView {
+    
+//    重写第三方的方法，防止方法改变的时候大面积替换工作
+    func zx_setImageWithURL(url: NSURL!){
+        sd_setImageWithURL(url)
+        
+    }
+    
+    
+    func zx_setImageWithURL(url: NSURL!, placeholderImage placeholder: UIImage!){
+        
+        sd_setImageWithURL(url, placeholderImage: placeholder)
+    }
+    
+    
+}
+

@@ -10,6 +10,12 @@ import UIKit
 import AFNetworking
 import SVProgressHUD
 
+// 统一管理cell的ID
+enum ZXStatusCellIdentifier: String {
+    case NormalCell = "NormalCell"
+    case ForwardCell = "ForwardCell"
+}
+
 class ZXHomeViewController: ZXBaseViewController {
     
     private var statuses:[ZXStatus]?{
@@ -33,6 +39,10 @@ class ZXHomeViewController: ZXBaseViewController {
         prepareUI()
         
         prepareTableView()
+//        创建下拉刷新控制器
+        let refreshVc = ZXRefreshControl()
+        
+        tableView.addSubview(refreshVc)
         
         ZXStatus.loadStatus { (statuses, error) -> () in
             if error != nil {
@@ -58,14 +68,17 @@ class ZXHomeViewController: ZXBaseViewController {
            }
     
     private func prepareTableView() {
-        tableView.registerClass(ZXStatusCell.self, forCellReuseIdentifier: "cell")
+        tableView.registerClass(ZXStatusNomalCell.self, forCellReuseIdentifier: ZXStatusCellIdentifier.NormalCell.rawValue)
+         tableView.registerClass(ZXStatusForwardCell.self, forCellReuseIdentifier: ZXStatusCellIdentifier.ForwardCell.rawValue)
         
-//        设置预算行高
-        tableView.estimatedRowHeight = 300
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         
-//        AutomaticDimension 根据约束自己来设置高度
-        tableView.rowHeight = UITableViewAutomaticDimension
-        
+////        设置预算行高
+//        tableView.estimatedRowHeight = 300
+//        
+////        AutomaticDimension 根据约束自己来设置高度
+//        tableView.rowHeight = UITableViewAutomaticDimension
+//        
         
     }
     
@@ -114,9 +127,36 @@ class ZXHomeViewController: ZXBaseViewController {
         button.imageView?.transform = transform!
     }
     
-        
-        
     }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        
+        // 获取模型
+        let status = statuses![indexPath.row]
+        
+        // 去模型里面查看之前有没有缓存行高
+        if let rowHeight = status.rowheight {
+            // 模型有缓存的行高
+            //            print("返回cell: \(indexPath.row), 缓存的行高:\(rowHeight)")
+            return rowHeight
+        }
+        // 没有缓存的行高
+        
+        let id = status.cellID()
+        // 获取cell
+        let cell = tableView.dequeueReusableCellWithIdentifier(id) as! ZXStatusCell
+        
+        // 调用cell计算行高的方法
+        let rowHeight = cell.rowHeight(status)
+        //        print("计算: \(indexPath.row), cell高度: \(rowHeight)")
+        
+        // 将行高缓存起来
+        status.rowheight = rowHeight
+        
+        return rowHeight
+    }
+    
+    
     
 //    MARK:- tableView代理方法
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -124,9 +164,12 @@ class ZXHomeViewController: ZXBaseViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! ZXStatusCell
         
-        cell.status = statuses?[indexPath.row]
+        let status = statuses![indexPath.row]
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier(status.cellID()) as! ZXStatusCell
+        
+        cell.status = status
         
         
         

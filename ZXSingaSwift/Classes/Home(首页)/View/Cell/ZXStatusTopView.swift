@@ -57,7 +57,7 @@ class ZXStatusTopView: UIView {
     }
 
     func prepareUI() {
-        
+        addSubview(headerLineView)
         addSubview(iconView)
         addSubview(nameLabel)
         addSubview(timeLabel)
@@ -66,7 +66,11 @@ class ZXStatusTopView: UIView {
         addSubview(menmberView)
         
         
-        iconView.ff_AlignInner(type: ff_AlignType.TopLeft, referView: self, size: CGSizeMake(35, 35), offset: CGPointMake(8, 8))
+        //    为headerLineView添加约束
+        headerLineView.ff_AlignInner(type: ff_AlignType.TopLeft, referView: self, size: CGSizeMake(UIScreen.mainScreen().bounds.width, 10), offset: CGPointMake(0, 0))
+        
+//        头像
+        iconView.ff_AlignVertical(type: ff_AlignType.BottomLeft, referView: headerLineView, size: CGSizeMake(35, 35), offset: CGPointMake(8, 8))
         
 //        名称
         nameLabel.ff_AlignHorizontal(type: ff_AlignType.TopRight, referView: iconView, size: nil, offset: CGPointMake(8, 0))
@@ -83,6 +87,7 @@ class ZXStatusTopView: UIView {
         /// 认证图标
         verifiedView.ff_AlignInner(type: ff_AlignType.BottomRight, referView: iconView, size: CGSize(width: 17, height: 17), offset: CGPoint(x: 8.5, y: 8.5))
         
+
         
     }
     
@@ -103,6 +108,15 @@ class ZXStatusTopView: UIView {
 //    会员等级
     private lazy var menmberView:UIImageView = UIImageView(image: UIImage(named: "common_icon_membership"))
     
+    //    添加顶部的一条分割线
+    private lazy var headerLineView:UIView =
+    {
+        let headerLine = UIView()
+        headerLine.backgroundColor = UIColor(white: 0.90, alpha: 1)
+//        headerLine.backgroundColor = UIColor.yellowColor()
+        return headerLine
+        
+        }()
     
     
 }

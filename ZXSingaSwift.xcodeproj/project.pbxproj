@@ -16,6 +16,8 @@
 		CB045E961BE4E9DF00A22682 /* ZXStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB045E951BE4E9DF00A22682 /* ZXStatusCell.swift */; settings = {ASSET_TAGS = (); }; };
 		CB045E981BE4EA0400A22682 /* ZXStatusTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB045E971BE4EA0400A22682 /* ZXStatusTopView.swift */; settings = {ASSET_TAGS = (); }; };
 		CB045E9A1BE4EB0200A22682 /* Label+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB045E991BE4EB0200A22682 /* Label+Extension.swift */; settings = {ASSET_TAGS = (); }; };
+		CB08FA3D1BE878C2009702A1 /* ZXRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB08FA3C1BE878C2009702A1 /* ZXRefreshControl.swift */; settings = {ASSET_TAGS = (); }; };
+		CB08FA3F1BE87989009702A1 /* ZXRefresh.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB08FA3E1BE87989009702A1 /* ZXRefresh.xib */; settings = {ASSET_TAGS = (); }; };
 		CB2206631BE302E000E9159A /* ZXNewFeatureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2206621BE302E000E9159A /* ZXNewFeatureController.swift */; settings = {ASSET_TAGS = (); }; };
 		CB22066A1BE3150C00E9159A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2206691BE3150C00E9159A /* UIColor+Extension.swift */; settings = {ASSET_TAGS = (); }; };
 		CB22066C1BE36F1200E9159A /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB22066B1BE36F1200E9159A /* UIBarButtonItem+Extension.swift */; settings = {ASSET_TAGS = (); }; };
@@ -30,6 +32,12 @@
 		CB6ED1261BDF58370068FCEA /* ZXTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6ED1251BDF58370068FCEA /* ZXTabBar.swift */; settings = {ASSET_TAGS = (); }; };
 		CB6ED1281BDF9B230068FCEA /* ZXBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6ED1271BDF9B230068FCEA /* ZXBaseViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		CB6ED12A1BDF9C720068FCEA /* ZXVisiterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6ED1291BDF9C720068FCEA /* ZXVisiterView.swift */; settings = {ASSET_TAGS = (); }; };
+		CBA726DA1BE5A8FA003BD58B /* ZXStatusBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA726D91BE5A8FA003BD58B /* ZXStatusBottomView.swift */; settings = {ASSET_TAGS = (); }; };
+		CBA726DC1BE5A9A5003BD58B /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA726DB1BE5A9A5003BD58B /* UIButton+Extension.swift */; settings = {ASSET_TAGS = (); }; };
+		CBA726DE1BE60757003BD58B /* ZXPictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA726DD1BE60757003BD58B /* ZXPictureView.swift */; settings = {ASSET_TAGS = (); }; };
+		CBA726E01BE610B7003BD58B /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA726DF1BE610B7003BD58B /* UIImageView+Extension.swift */; settings = {ASSET_TAGS = (); }; };
+		CBE7AEEB1BE631E100B40D4B /* ZXStatusNomalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE7AEEA1BE631E100B40D4B /* ZXStatusNomalCell.swift */; settings = {ASSET_TAGS = (); }; };
+		CBE7AEED1BE6321F00B40D4B /* ZXStatusForwardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE7AEEC1BE6321F00B40D4B /* ZXStatusForwardCell.swift */; settings = {ASSET_TAGS = (); }; };
 		CBF467CC1BE244AE00D963CE /* ZXUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF467CB1BE244AE00D963CE /* ZXUserAccount.swift */; settings = {ASSET_TAGS = (); }; };
 		CBF66D0C1BDE556700937A82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF66D0B1BDE556700937A82 /* AppDelegate.swift */; };
 		CBF66D131BDE556700937A82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBF66D121BDE556700937A82 /* Assets.xcassets */; };
@@ -46,6 +54,8 @@
 		CB045E951BE4E9DF00A22682 /* ZXStatusCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXStatusCell.swift; sourceTree = "<group>"; };
 		CB045E971BE4EA0400A22682 /* ZXStatusTopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXStatusTopView.swift; sourceTree = "<group>"; };
 		CB045E991BE4EB0200A22682 /* Label+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Label+Extension.swift"; sourceTree = "<group>"; };
+		CB08FA3C1BE878C2009702A1 /* ZXRefreshControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXRefreshControl.swift; sourceTree = "<group>"; };
+		CB08FA3E1BE87989009702A1 /* ZXRefresh.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZXRefresh.xib; sourceTree = "<group>"; };
 		CB2206621BE302E000E9159A /* ZXNewFeatureController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXNewFeatureController.swift; sourceTree = "<group>"; };
 		CB2206691BE3150C00E9159A /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		CB22066B1BE36F1200E9159A /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
@@ -60,6 +70,12 @@
 		CB6ED1251BDF58370068FCEA /* ZXTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXTabBar.swift; sourceTree = "<group>"; };
 		CB6ED1271BDF9B230068FCEA /* ZXBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXBaseViewController.swift; sourceTree = "<group>"; };
 		CB6ED1291BDF9C720068FCEA /* ZXVisiterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXVisiterView.swift; sourceTree = "<group>"; };
+		CBA726D91BE5A8FA003BD58B /* ZXStatusBottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXStatusBottomView.swift; sourceTree = "<group>"; };
+		CBA726DB1BE5A9A5003BD58B /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		CBA726DD1BE60757003BD58B /* ZXPictureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXPictureView.swift; sourceTree = "<group>"; };
+		CBA726DF1BE610B7003BD58B /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		CBE7AEEA1BE631E100B40D4B /* ZXStatusNomalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXStatusNomalCell.swift; sourceTree = "<group>"; };
+		CBE7AEEC1BE6321F00B40D4B /* ZXStatusForwardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXStatusForwardCell.swift; sourceTree = "<group>"; };
 		CBF467CB1BE244AE00D963CE /* ZXUserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXUserAccount.swift; sourceTree = "<group>"; };
 		CBF66D081BDE556700937A82 /* ZXSingaSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZXSingaSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBF66D0B1BDE556700937A82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../AppDelegate.swift; sourceTree = "<group>"; };
@@ -101,9 +117,22 @@
 			isa = PBXGroup;
 			children = (
 				CB045E951BE4E9DF00A22682 /* ZXStatusCell.swift */,
+				CBE7AEEA1BE631E100B40D4B /* ZXStatusNomalCell.swift */,
+				CBE7AEEC1BE6321F00B40D4B /* ZXStatusForwardCell.swift */,
 				CB045E971BE4EA0400A22682 /* ZXStatusTopView.swift */,
+				CBA726D91BE5A8FA003BD58B /* ZXStatusBottomView.swift */,
+				CBA726DD1BE60757003BD58B /* ZXPictureView.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		CB08FA3B1BE8789E009702A1 /* Refresh */ = {
+			isa = PBXGroup;
+			children = (
+				CB08FA3C1BE878C2009702A1 /* ZXRefreshControl.swift */,
+				CB08FA3E1BE87989009702A1 /* ZXRefresh.xib */,
+			);
+			path = Refresh;
 			sourceTree = "<group>";
 		};
 		CB4DA8271BE2841F0037F963 /* NewFeature(新特性) */ = {
@@ -213,6 +242,7 @@
 		CB6ED0EC1BDF0A100068FCEA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CB08FA3B1BE8789E009702A1 /* Refresh */,
 				CB045E941BE4E99700A22682 /* Cell */,
 				CB045E8A1BE480E500A22682 /* ZXTitleBtn.swift */,
 			);
@@ -308,6 +338,8 @@
 				CB2206691BE3150C00E9159A /* UIColor+Extension.swift */,
 				CB22066B1BE36F1200E9159A /* UIBarButtonItem+Extension.swift */,
 				CB045E991BE4EB0200A22682 /* Label+Extension.swift */,
+				CBA726DB1BE5A9A5003BD58B /* UIButton+Extension.swift */,
+				CBA726DF1BE610B7003BD58B /* UIImageView+Extension.swift */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -453,6 +485,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBF66D131BDE556700937A82 /* Assets.xcassets in Resources */,
+				CB08FA3F1BE87989009702A1 /* ZXRefresh.xib in Resources */,
 				CB045E8D1BE4D95200A22682 /* statuses.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -513,6 +546,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB22066C1BE36F1200E9159A /* UIBarButtonItem+Extension.swift in Sources */,
+				CB08FA3D1BE878C2009702A1 /* ZXRefreshControl.swift in Sources */,
 				CB045E8F1BE4DFD600A22682 /* UIView+AutoLayout.swift in Sources */,
 				CB6ED12A1BDF9C720068FCEA /* ZXVisiterView.swift in Sources */,
 				CB045E931BE4E2FB00A22682 /* ZXStatus.swift in Sources */,
@@ -520,8 +554,11 @@
 				CB6ED1281BDF9B230068FCEA /* ZXBaseViewController.swift in Sources */,
 				CB6451031BE0E59700312B24 /* ZXOuathController.swift in Sources */,
 				CB4DA82A1BE284BA0037F963 /* ZXWelcomeBackController.swift in Sources */,
+				CBA726DC1BE5A9A5003BD58B /* UIButton+Extension.swift in Sources */,
+				CBA726DA1BE5A8FA003BD58B /* ZXStatusBottomView.swift in Sources */,
 				CB6ED0FE1BDF0B9B0068FCEA /* ZXDiscoverViewController.swift in Sources */,
 				CB6451451BE11E6000312B24 /* ZXNTWorking.swift in Sources */,
+				CBA726E01BE610B7003BD58B /* UIImageView+Extension.swift in Sources */,
 				CB045E9A1BE4EB0200A22682 /* Label+Extension.swift in Sources */,
 				CB6ED1001BDF0BAA0068FCEA /* ZXMeViewController.swift in Sources */,
 				CB045E8B1BE480E500A22682 /* ZXTitleBtn.swift in Sources */,
@@ -529,12 +566,15 @@
 				CB6ED0FA1BDF0B5E0068FCEA /* ZXHomeViewController.swift in Sources */,
 				CB045E961BE4E9DF00A22682 /* ZXStatusCell.swift in Sources */,
 				CB22066A1BE3150C00E9159A /* UIColor+Extension.swift in Sources */,
+				CBA726DE1BE60757003BD58B /* ZXPictureView.swift in Sources */,
 				CB2206631BE302E000E9159A /* ZXNewFeatureController.swift in Sources */,
 				CBF467CC1BE244AE00D963CE /* ZXUserAccount.swift in Sources */,
+				CBE7AEED1BE6321F00B40D4B /* ZXStatusForwardCell.swift in Sources */,
 				CB045E981BE4EA0400A22682 /* ZXStatusTopView.swift in Sources */,
 				CB6ED0FC1BDF0B850068FCEA /* ZXMessageViewController.swift in Sources */,
 				CB6ED1061BDF0C520068FCEA /* ZXTabBarController.swift in Sources */,
 				CB6ED1261BDF58370068FCEA /* ZXTabBar.swift in Sources */,
+				CBE7AEEB1BE631E100B40D4B /* ZXStatusNomalCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
