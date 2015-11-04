@@ -107,11 +107,6 @@ extension ZXOuathController: UIWebViewDelegate {
     func loadAccessToken(code:String) {
         ZXNTWorking.sharedInstance.loadAccessToken(code) { (result, error) -> () in
             if error != nil || result == nil {
-//                SVProgressHUD.showErrorWithStatus("网络不给力。。。", maskType: SVProgressHUDMaskType.Black)
-////                延迟关闭
-//                dispatch_after(dispatch_time(DISPATCH_TIME_NOW,(Int64)(NSEC_PER_SEC*1)), dispatch_get_main_queue(), { () -> Void in
-//                    self.cancelBtnClick()
-//                })
                 self.netError("网络不给力...")
                 return
             }

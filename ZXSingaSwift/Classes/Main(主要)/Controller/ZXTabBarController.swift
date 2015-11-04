@@ -14,7 +14,7 @@ class ZXTabBarController: UITabBarController {
         super.viewDidLoad()
 //        创建自己的tabbar
         let newTabBar = ZXTabBar()
-        newTabBar.addBtn.addTarget(self, action: "addBtnClick", forControlEvents: UIControlEvents.TouchDragInside)
+        newTabBar.addBtn.addTarget(self, action: "addBtnClick", forControlEvents: UIControlEvents.TouchUpInside)
 //        使用kvc
         setValue(newTabBar, forKey: "tabBar")
         
@@ -57,9 +57,12 @@ class ZXTabBarController: UITabBarController {
     
     
 //    加号按钮的点击事件
-    private func addBtnClick()
+     func addBtnClick()
     {
-        print("fff")
+        let vc = ZXUserAccount.userLogin() ? ZXComposeController() : ZXOuathController()
+        
+        presentViewController(UINavigationController(rootViewController: vc), animated: true, completion: nil)
+        
     }
     
 }

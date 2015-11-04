@@ -98,17 +98,7 @@ class ZXUserAccount: NSObject ,NSCoding{
             userAccount = NSKeyedUnarchiver.unarchiveObjectWithFile(accountPath) as? ZXUserAccount
         }
         
-        // 判断如果有账号,还需要判断是否过期
-        // NSDate(): 表示当前时间 2015
-        // userAccount?.expires_date: 2020
-        // userAccount?.expires_date > NSDate(): 没有过期
-        // OrderedAscending (<) OrderedSame (=) OrderedDescending (>)
-        
-        // 测试时间过期
-        //        userAccount?.expires_date = NSDate(timeIntervalSinceNow: -100)  // 比当前时间早100秒
-        //        print(userAccount?.expires_date)
-        //        print("当前时间:\(NSDate())")
-        if userAccount != nil && userAccount?.expires_date?.compare(NSDate()) == NSComparisonResult.OrderedDescending {
+                if userAccount != nil && userAccount?.expires_date?.compare(NSDate()) == NSComparisonResult.OrderedDescending {
             print("账号有效，啊哈")
             return userAccount
         }

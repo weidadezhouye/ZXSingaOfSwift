@@ -15,7 +15,7 @@ class ZXStatus: NSObject {
     var created_at: String?
     
     /// 字符串型的微博ID
-    var idstr: String?
+    var id: Int = 0
     
     /// 微博信息内容
     var text: String?
@@ -114,8 +114,9 @@ class ZXStatus: NSObject {
     
     /// 加载微博数据
     /// 没有模型对象就能加载数据
-    class func loadStatus(finished: (statuses: [ZXStatus]?, error: NSError?) -> ()) {
-        ZXNTWorking.sharedInstance.loadStatus { (result, error) -> () in
+    class func loadStatus(since_id: Int, max_id: Int, finished: (statuses: [ZXStatus]?, error: NSError?) -> ()) {
+
+        ZXNTWorking.sharedInstance.loadStatus(since_id, max_id: max_id) { (result, error) -> () in
             if error != nil {
                 print("error:\(error)")
                 // 通知调用者
@@ -134,10 +135,10 @@ class ZXStatus: NSObject {
                     statuses.append(ZXStatus(dict: dict))
                 }
                 
-                // 字典转模型完成
+                // 字典转模型结束
                 // 通知调用者
-                self.cacheWebImage(statuses, finished: finished)
-                
+//                self.cacheWebImage(statuses, finished: finished)
+                finished(statuses: statuses, error: nil)
             } else {
                 // 没有数据,通知调用者
                 finished(statuses: nil, error: nil)
@@ -148,6 +149,10 @@ class ZXStatus: NSObject {
     class func cacheWebImage(statuses: [ZXStatus]?, finished: (statuses: [ZXStatus]?, error: NSError?) -> ()) {
         // 创建任务组
         let group = dispatch_group_create()
+        
+        
+        
+        
         
         // 判断是否有模型
         guard let list = statuses else {
@@ -160,7 +165,7 @@ class ZXStatus: NSObject {
         
         // 遍历模型
         for status in list {
-            // 如果没有图片需要下载,接着遍历下一个
+        
             let count = status.pictureURLs?.count ?? 0
             if count == 0 {
                 // 没有图片,遍历下一个模型
@@ -178,7 +183,7 @@ class ZXStatus: NSObject {
                     // 在缓存之前放到任务组里面
                     dispatch_group_enter(group)
                     SDWebImageManager.sharedManager().downloadImageWithURL(url, options: SDWebImageOptions(rawValue: 0), progress: nil, completed: { (image, error, _, _, _) -> Void in
-                        // 离开组
+                        // 离开这一组
                         dispatch_group_leave(group)
                         
                         // 判断有没有错误

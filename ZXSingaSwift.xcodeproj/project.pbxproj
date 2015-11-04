@@ -21,6 +21,7 @@
 		CB2206631BE302E000E9159A /* ZXNewFeatureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2206621BE302E000E9159A /* ZXNewFeatureController.swift */; settings = {ASSET_TAGS = (); }; };
 		CB22066A1BE3150C00E9159A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2206691BE3150C00E9159A /* UIColor+Extension.swift */; settings = {ASSET_TAGS = (); }; };
 		CB22066C1BE36F1200E9159A /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB22066B1BE36F1200E9159A /* UIBarButtonItem+Extension.swift */; settings = {ASSET_TAGS = (); }; };
+		CB35FFD31BE8F6C700373347 /* ZXComposeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB35FFD21BE8F6C700373347 /* ZXComposeController.swift */; settings = {ASSET_TAGS = (); }; };
 		CB4DA82A1BE284BA0037F963 /* ZXWelcomeBackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4DA8291BE284BA0037F963 /* ZXWelcomeBackController.swift */; settings = {ASSET_TAGS = (); }; };
 		CB6451031BE0E59700312B24 /* ZXOuathController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6451021BE0E59700312B24 /* ZXOuathController.swift */; settings = {ASSET_TAGS = (); }; };
 		CB6451451BE11E6000312B24 /* ZXNTWorking.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6451441BE11E6000312B24 /* ZXNTWorking.swift */; settings = {ASSET_TAGS = (); }; };
@@ -59,9 +60,10 @@
 		CB2206621BE302E000E9159A /* ZXNewFeatureController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXNewFeatureController.swift; sourceTree = "<group>"; };
 		CB2206691BE3150C00E9159A /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		CB22066B1BE36F1200E9159A /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
+		CB35FFD21BE8F6C700373347 /* ZXComposeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXComposeController.swift; sourceTree = "<group>"; };
 		CB4DA8291BE284BA0037F963 /* ZXWelcomeBackController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXWelcomeBackController.swift; sourceTree = "<group>"; };
 		CB6451021BE0E59700312B24 /* ZXOuathController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXOuathController.swift; sourceTree = "<group>"; };
-		CB6451441BE11E6000312B24 /* ZXNTWorking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXNTWorking.swift; sourceTree = "<group>"; };
+		CB6451441BE11E6000312B24 /* ZXNTWorking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZXNTWorking.swift; path = ../Tool/ZXNTWorking.swift; sourceTree = "<group>"; };
 		CB6ED0F91BDF0B5E0068FCEA /* ZXHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXHomeViewController.swift; sourceTree = "<group>"; };
 		CB6ED0FB1BDF0B850068FCEA /* ZXMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXMessageViewController.swift; sourceTree = "<group>"; };
 		CB6ED0FD1BDF0B9B0068FCEA /* ZXDiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXDiscoverViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +137,22 @@
 			path = Refresh;
 			sourceTree = "<group>";
 		};
+		CB35FFD01BE8F69E00373347 /* Compose(发微博) */ = {
+			isa = PBXGroup;
+			children = (
+				CB35FFD11BE8F69E00373347 /* Controller */,
+			);
+			path = "Compose(发微博)";
+			sourceTree = "<group>";
+		};
+		CB35FFD11BE8F69E00373347 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CB35FFD21BE8F6C700373347 /* ZXComposeController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		CB4DA8271BE2841F0037F963 /* NewFeature(新特性) */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +189,7 @@
 		CB6ED0E41BDF0A100068FCEA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				CB35FFD01BE8F69E00373347 /* Compose(发微博) */,
 				CB4DA8271BE2841F0037F963 /* NewFeature(新特性) */,
 				CB6451001BE0E56500312B24 /* Ouath(授权) */,
 				CB6ED1011BDF0BFF0068FCEA /* Main(主要) */,
@@ -316,6 +335,7 @@
 		CB6ED0F51BDF0A100068FCEA /* GlobalModel */ = {
 			isa = PBXGroup;
 			children = (
+				CB6451441BE11E6000312B24 /* ZXNTWorking.swift */,
 				CBF467CB1BE244AE00D963CE /* ZXUserAccount.swift */,
 				CB045E901BE4E2E600A22682 /* ZXUser.swift */,
 				CB045E921BE4E2FB00A22682 /* ZXStatus.swift */,
@@ -334,7 +354,6 @@
 			isa = PBXGroup;
 			children = (
 				CB045E8E1BE4DFD600A22682 /* UIView+AutoLayout.swift */,
-				CB6451441BE11E6000312B24 /* ZXNTWorking.swift */,
 				CB2206691BE3150C00E9159A /* UIColor+Extension.swift */,
 				CB22066B1BE36F1200E9159A /* UIBarButtonItem+Extension.swift */,
 				CB045E991BE4EB0200A22682 /* Label+Extension.swift */,
@@ -553,6 +572,7 @@
 				CBF66D0C1BDE556700937A82 /* AppDelegate.swift in Sources */,
 				CB6ED1281BDF9B230068FCEA /* ZXBaseViewController.swift in Sources */,
 				CB6451031BE0E59700312B24 /* ZXOuathController.swift in Sources */,
+				CB35FFD31BE8F6C700373347 /* ZXComposeController.swift in Sources */,
 				CB4DA82A1BE284BA0037F963 /* ZXWelcomeBackController.swift in Sources */,
 				CBA726DC1BE5A9A5003BD58B /* UIButton+Extension.swift in Sources */,
 				CBA726DA1BE5A8FA003BD58B /* ZXStatusBottomView.swift in Sources */,
