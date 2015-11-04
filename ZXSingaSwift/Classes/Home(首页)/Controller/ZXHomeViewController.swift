@@ -42,11 +42,18 @@ class ZXHomeViewController: ZXBaseViewController {
         refreshControl = ZXRefreshControl()
 //        添加下拉刷新事件
         refreshControl?.addTarget(self, action: "loadData", forControlEvents: UIControlEvents.ValueChanged)
+<<<<<<< HEAD
         
 //        调用方法开始刷新
         refreshControl?.beginRefreshing()
 //        代码触发刷新事件（因为一进去就会调用刷新数据）
         refreshControl?.sendActionsForControlEvents(UIControlEvents.ValueChanged)
+=======
+//        
+        refreshControl?.beginRefreshing()
+//        代码触发刷新事件（因为一进去就会调用刷新数据）
+//        refreshControl?.sendActionsForControlEvents(UIControlEvents.ValueChanged)
+>>>>>>> ae99e3aeaeb811dee421f838c73163212442c343
         
         
 //        ZXStatus.loadStatus { (statuses, error) -> () in
@@ -69,8 +76,13 @@ class ZXHomeViewController: ZXBaseViewController {
            }
     
     func loadData() {
+<<<<<<< HEAD
        
         print("加载")
+=======
+        // TODO: 测试获取微博数据
+        print("加载微博数据")
+>>>>>>> ae99e3aeaeb811dee421f838c73163212442c343
         // 默认下拉刷新,获取id最大的微博, 如果没有数据,就默认加载20
         var since_id = statuses?.first?.id ?? 0
         var max_id = 0
@@ -79,7 +91,11 @@ class ZXHomeViewController: ZXBaseViewController {
         if pullUpView.isAnimating() {
             // 上拉加载更多数据
             since_id = 0
+<<<<<<< HEAD
             max_id = statuses?.last?.id ?? 0
+=======
+            max_id = statuses?.last?.id ?? 0 // 设置为最后一条微博的id
+>>>>>>> ae99e3aeaeb811dee421f838c73163212442c343
         }
         
         ZXStatus.loadStatus(since_id, max_id: max_id) { (statuses, error) -> () in
@@ -90,7 +106,11 @@ class ZXHomeViewController: ZXBaseViewController {
             self.pullUpView.stopAnimating()
             
             if error != nil {
+<<<<<<< HEAD
                 SVProgressHUD.showErrorWithStatus("加载数据失败,网络不给力", maskType: SVProgressHUDMaskType.Black)
+=======
+                SVProgressHUD.showErrorWithStatus("加载微博数据失败,网络不给力", maskType: SVProgressHUDMaskType.Black)
+>>>>>>> ae99e3aeaeb811dee421f838c73163212442c343
                 
                 return
             }
@@ -109,6 +129,7 @@ class ZXHomeViewController: ZXBaseViewController {
             }
             
             // 判断如果是下拉刷新,加获取到数据拼接在现有数据的前
+<<<<<<< HEAD
             if since_id > 0 {
                 
                 
@@ -118,17 +139,70 @@ class ZXHomeViewController: ZXBaseViewController {
                 
                 
                 // 最新数据 =  原有的数据 + 新获取到的数据
+=======
+            if since_id > 0 {   // 下拉刷新
+                // 最新数据 =  新获取到的数据 + 原有的数据
+                print("下拉刷新,获取到: \(statuses?.count)");
+                self.statuses = statuses! + self.statuses!
+            } else if max_id > 0 {  // 上拉加载更多数据
+                // 最新数据 =  原有的数据 + 新获取到的数据
+                print("上拉加载更多数据,获取到: \(statuses?.count)");
+>>>>>>> ae99e3aeaeb811dee421f838c73163212442c343
                 self.statuses = self.statuses! + statuses!
             } else {
                 // 有微博数据
                 self.statuses = statuses
+<<<<<<< HEAD
                
+            }
+=======
+                print("获取最新20条数据.获取到 \(statuses?.count) 条微博")
             }
             
         }
     }
 
     
+    
+    /// 显示下拉刷新加载了多少条微博
+    private func showTipView(count: Int) {
+        let tipLabelHeight: CGFloat = 44
+        let tipLabel = UILabel()
+        tipLabel.frame = CGRect(x: 0, y: -20 - tipLabelHeight, width: UIScreen.mainScreen().bounds.width, height: tipLabelHeight)
+        
+        tipLabel.textColor = UIColor.whiteColor()
+        tipLabel.backgroundColor = UIColor.orangeColor()
+        tipLabel.font = UIFont.systemFontOfSize(16)
+        tipLabel.textAlignment = NSTextAlignment.Center
+        
+        tipLabel.text = count == 0 ? "没有新的微博" : "加载了 \(count) 条微博"
+        
+        // 导航栏是从状态栏下面开始
+        // 添加到导航栏最下面
+        navigationController?.navigationBar.insertSubview(tipLabel, atIndex: 0)
+        
+        let duration = 0.75
+        // 开始动画
+        UIView.animateWithDuration(duration, animations: { () -> Void in
+            // 让动画反过来执行
+            //            UIView.setAnimationRepeatAutoreverses(true)
+>>>>>>> ae99e3aeaeb811dee421f838c73163212442c343
+            
+            // 重复执行
+            //            UIView.setAnimationRepeatCount(5)
+            tipLabel.frame.origin.y = tipLabelHeight
+            }) { (_) -> Void in
+                
+                UIView.animateWithDuration(duration, delay: 0.3, options: UIViewAnimationOptions(rawValue: 0), animations: { () -> Void in
+                    tipLabel.frame.origin.y = -20 - tipLabelHeight
+                    }, completion: { (_) -> Void in
+                        tipLabel.removeFromSuperview()
+                })
+        }
+    }
+
+    
+<<<<<<< HEAD
     
     /// 展示下拉刷新加载了多少条微博
     private func showTipView(count: Int) {
@@ -169,6 +243,8 @@ class ZXHomeViewController: ZXBaseViewController {
     }
 
     
+=======
+>>>>>>> ae99e3aeaeb811dee421f838c73163212442c343
     
     private func prepareTableView() {
         tableView.registerClass(ZXStatusNomalCell.self, forCellReuseIdentifier: ZXStatusCellIdentifier.NormalCell.rawValue)
@@ -291,8 +367,13 @@ class ZXHomeViewController: ZXBaseViewController {
         
     }
     
+<<<<<<< HEAD
     //     MARK: - 懒加载
     /// 上拉加载更多数据显示的菊控制器
+=======
+    // MARK: - 懒加载
+    /// 上拉加载更多数据显示的菊花
+>>>>>>> ae99e3aeaeb811dee421f838c73163212442c343
     private lazy var pullUpView: UIActivityIndicatorView = {
         let indicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.WhiteLarge)
         
