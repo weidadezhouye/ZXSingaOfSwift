@@ -33,6 +33,7 @@
 		CB6ED1261BDF58370068FCEA /* ZXTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6ED1251BDF58370068FCEA /* ZXTabBar.swift */; settings = {ASSET_TAGS = (); }; };
 		CB6ED1281BDF9B230068FCEA /* ZXBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6ED1271BDF9B230068FCEA /* ZXBaseViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		CB6ED12A1BDF9C720068FCEA /* ZXVisiterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6ED1291BDF9C720068FCEA /* ZXVisiterView.swift */; settings = {ASSET_TAGS = (); }; };
+		CB9AA2081BE9F9FF00D91E7E /* ZXTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9AA2071BE9F9FF00D91E7E /* ZXTextView.swift */; settings = {ASSET_TAGS = (); }; };
 		CBA726DA1BE5A8FA003BD58B /* ZXStatusBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA726D91BE5A8FA003BD58B /* ZXStatusBottomView.swift */; settings = {ASSET_TAGS = (); }; };
 		CBA726DC1BE5A9A5003BD58B /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA726DB1BE5A9A5003BD58B /* UIButton+Extension.swift */; settings = {ASSET_TAGS = (); }; };
 		CBA726DE1BE60757003BD58B /* ZXPictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA726DD1BE60757003BD58B /* ZXPictureView.swift */; settings = {ASSET_TAGS = (); }; };
@@ -72,6 +73,7 @@
 		CB6ED1251BDF58370068FCEA /* ZXTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXTabBar.swift; sourceTree = "<group>"; };
 		CB6ED1271BDF9B230068FCEA /* ZXBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXBaseViewController.swift; sourceTree = "<group>"; };
 		CB6ED1291BDF9C720068FCEA /* ZXVisiterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXVisiterView.swift; sourceTree = "<group>"; };
+		CB9AA2071BE9F9FF00D91E7E /* ZXTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXTextView.swift; sourceTree = "<group>"; };
 		CBA726D91BE5A8FA003BD58B /* ZXStatusBottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXStatusBottomView.swift; sourceTree = "<group>"; };
 		CBA726DB1BE5A9A5003BD58B /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		CBA726DD1BE60757003BD58B /* ZXPictureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXPictureView.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				CB35FFD11BE8F69E00373347 /* Controller */,
+				CB9AA2061BE9F9E300D91E7E /* View */,
 			);
 			path = "Compose(发微博)";
 			sourceTree = "<group>";
@@ -410,6 +413,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		CB9AA2061BE9F9E300D91E7E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CB9AA2071BE9F9FF00D91E7E /* ZXTextView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		CBF66CFF1BDE556700937A82 = {
 			isa = PBXGroup;
 			children = (
@@ -593,6 +604,7 @@
 				CB045E981BE4EA0400A22682 /* ZXStatusTopView.swift in Sources */,
 				CB6ED0FC1BDF0B850068FCEA /* ZXMessageViewController.swift in Sources */,
 				CB6ED1061BDF0C520068FCEA /* ZXTabBarController.swift in Sources */,
+				CB9AA2081BE9F9FF00D91E7E /* ZXTextView.swift in Sources */,
 				CB6ED1261BDF58370068FCEA /* ZXTabBar.swift in Sources */,
 				CBE7AEEB1BE631E100B40D4B /* ZXStatusNomalCell.swift in Sources */,
 			);
